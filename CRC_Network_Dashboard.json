@@ -1,0 +1,927 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "First attempt towards monitoring of CRC network with Grafana",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "eei69dub5np4wc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "LNGS"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0-85518.patch7-85777",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "7700",
+              "text": "LNGS",
+              "type": "number"
+            },
+            {
+              "selector": "Time",
+              "text": "Time",
+              "type": "timestamp"
+            },
+            {
+              "selector": "7705",
+              "text": "Surface",
+              "type": "number"
+            },
+            {
+              "selector": "7706",
+              "text": "Museum",
+              "type": "number"
+            },
+            {
+              "selector": "7708",
+              "text": "Milano Bicocca",
+              "type": "number"
+            },
+            {
+              "selector": "7710",
+              "text": "INFN Trieste",
+              "type": "number"
+            },
+            {
+              "selector": "7720",
+              "text": "IIS Sarrocchi Siena",
+              "type": "number"
+            },
+            {
+              "selector": "7713",
+              "text": "INFN Ferrara",
+              "type": "number"
+            },
+            {
+              "selector": "7719",
+              "text": "INFN LNL",
+              "type": "number"
+            },
+            {
+              "selector": "7722",
+              "text": "INAF Milano",
+              "type": "number"
+            },
+            {
+              "selector": "7707",
+              "text": "GSSI",
+              "type": "number"
+            },
+            {
+              "selector": "7712",
+              "text": "INFN Roma 1",
+              "type": "number"
+            },
+            {
+              "selector": "7721",
+              "text": "INFN Roma 3",
+              "type": "number"
+            },
+            {
+              "selector": "7709",
+              "text": "INGV Roma",
+              "type": "number"
+            },
+            {
+              "selector": "7702",
+              "text": "INFN Napoli",
+              "type": "number"
+            },
+            {
+              "selector": "7724",
+              "text": "INFN Bari",
+              "type": "number"
+            },
+            {
+              "selector": "7715",
+              "text": "Università di Palermo",
+              "type": "number"
+            },
+            {
+              "selector": "7716",
+              "text": "INFN Catania",
+              "type": "number"
+            },
+            {
+              "selector": "7701",
+              "text": "NYUAD",
+              "type": "number"
+            },
+            {
+              "selector": "7703",
+              "text": "Kamioka (surface)",
+              "type": "number"
+            },
+            {
+              "selector": "7704",
+              "text": "SNOLAB",
+              "type": "number"
+            },
+            {
+              "selector": "7711",
+              "text": "UNAM",
+              "type": "number"
+            },
+            {
+              "selector": "7714",
+              "text": "Canadian Nuc. Lab.",
+              "type": "number"
+            },
+            {
+              "selector": "7730",
+              "text": "University of Innsbruck",
+              "type": "number"
+            },
+            {
+              "selector": "7733",
+              "text": "INFN Roma 2",
+              "type": "number"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "eei69dub5np4wc"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "simple",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "csv",
+          "uql": "parse-csv",
+          "url": "https://raw.githubusercontent.com/antonioiuliano2/crc_summary/refs/heads/master/CRCNetwork_status_report.csv",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "CRC Online Status",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "light-blue",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0-85518.patch7-85777",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 1,
+          "refId": "A"
+        }
+      ],
+      "title": "Total number of connected CRCs",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {}
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "Time",
+                "Total"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "eei69dub5np4wc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [
+            {
+              "options": {
+                "from": 24,
+                "result": {
+                  "color": "yellow",
+                  "index": 0
+                },
+                "to": 168
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 0,
+                "result": {
+                  "color": "green",
+                  "index": 1
+                },
+                "to": 24
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 168,
+                "result": {
+                  "color": "red",
+                  "index": 2
+                },
+                "to": 1000000
+              },
+              "type": "range"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 7,
+      "options": {
+        "displayMode": "basic",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "maxVizHeight": 300,
+        "minVizHeight": 16,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "sizing": "auto",
+        "valueMode": "color"
+      },
+      "pluginVersion": "11.5.5+security-01",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "7700",
+              "text": "LNGS",
+              "type": "number"
+            },
+            {
+              "selector": "7705",
+              "text": "Surface",
+              "type": "number"
+            },
+            {
+              "selector": "7706",
+              "text": "Museum",
+              "type": "number"
+            },
+            {
+              "selector": "7708",
+              "text": "Milano Bicocca",
+              "type": "number"
+            },
+            {
+              "selector": "7710",
+              "text": "INFN Trieste",
+              "type": "number"
+            },
+            {
+              "selector": "7720",
+              "text": "IIS Sarrocchi Siena",
+              "type": "number"
+            },
+            {
+              "selector": "7713",
+              "text": "INFN Ferrara",
+              "type": "number"
+            },
+            {
+              "selector": "7719",
+              "text": "INFN Padova",
+              "type": "number"
+            },
+            {
+              "selector": "7722",
+              "text": "INAF Milano",
+              "type": "number"
+            },
+            {
+              "selector": "7707",
+              "text": "GSSI",
+              "type": "number"
+            },
+            {
+              "selector": "7712",
+              "text": "INFN Roma 1",
+              "type": "number"
+            },
+            {
+              "selector": "7721",
+              "text": "INFN Roma 3",
+              "type": "number"
+            },
+            {
+              "selector": "7709",
+              "text": "INGV Roma",
+              "type": "number"
+            },
+            {
+              "selector": "7702",
+              "text": "INFN Napoli",
+              "type": "number"
+            },
+            {
+              "selector": "7724",
+              "text": "INFN Bari",
+              "type": "number"
+            },
+            {
+              "selector": "7715",
+              "text": "Università di Palermo",
+              "type": "number"
+            },
+            {
+              "selector": "7716",
+              "text": "INFN Catania",
+              "type": "number"
+            },
+            {
+              "selector": "7701",
+              "text": "NYUAD",
+              "type": "number"
+            },
+            {
+              "selector": "7703",
+              "text": "Kamioka (surface)",
+              "type": "number"
+            },
+            {
+              "selector": "7704",
+              "text": "SNOLAB",
+              "type": "number"
+            },
+            {
+              "selector": "7711",
+              "text": "UNAM",
+              "type": "number"
+            },
+            {
+              "selector": "7714",
+              "text": "Canadian Nuc. Lab.",
+              "type": "number"
+            },
+            {
+              "selector": "7730",
+              "text": "University of Innsbruck",
+              "type": "number"
+            },
+            {
+              "selector": "7733",
+              "text": "INFN Roma 2",
+              "type": "number"
+            }
+          ],
+          "computed_columns": [],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "eei69dub5np4wc"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "csv",
+          "url": "https://github.com/antonioiuliano2/crc_summary/blob/master/OfflineTimeCRCs.csv",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Time since last online (hours)",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "IIS Sarrocchi Siena",
+                "INFN Bari",
+                "INFN Ferrara",
+                "INFN Napoli",
+                "INFN Padova",
+                "INFN Roma 2",
+                "INFN Roma 3",
+                "LNGS"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 25
+              },
+              {
+                "color": "green",
+                "value": 75
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 6,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": true
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "11.5.5+security-01",
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 1,
+          "refId": "A"
+        }
+      ],
+      "title": "CRC average uptime [%]",
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "destinationType": "number",
+                "targetField": "Time"
+              }
+            ],
+            "fields": {}
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "StartTime",
+            "binary": {
+              "left": "0",
+              "right": "$__from"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "EndTime",
+            "binary": {
+              "left": "0",
+              "right": "$__to"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Time-StartTime",
+            "binary": {
+              "left": "Time",
+              "operator": "-",
+              "right": "StartTime"
+            },
+            "mode": "binary",
+            "reduce": {
+              "include": [
+                "Time"
+              ],
+              "reducer": "diff"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Time-EndTime",
+            "binary": {
+              "left": "Time",
+              "operator": "-",
+              "right": "EndTime"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "greater",
+                  "options": {
+                    "value": 0
+                  }
+                },
+                "fieldName": "Time-StartTime"
+              },
+              {
+                "config": {
+                  "id": "lower",
+                  "options": {
+                    "value": 0
+                  }
+                },
+                "fieldName": "Time-EndTime"
+              }
+            ],
+            "match": "all",
+            "type": "include"
+          }
+        },
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "sum",
+              "count"
+            ]
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Uptime Percentage",
+            "binary": {
+              "left": "Total",
+              "operator": "/",
+              "right": "Count"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Uptime Percentage %",
+            "binary": {
+              "left": "Uptime Percentage",
+              "operator": "*",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "greater",
+                  "options": {
+                    "value": "0"
+                  }
+                },
+                "fieldName": "Uptime Percentage %"
+              }
+            ],
+            "match": "any",
+            "type": "include"
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "greater",
+                  "options": {
+                    "value": 100
+                  }
+                },
+                "fieldName": "Uptime Percentage %"
+              }
+            ],
+            "match": "any",
+            "type": "exclude"
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "Field",
+                "Uptime Percentage %"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "gauge"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 40,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-30d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "CRC Network Dashboard",
+  "uid": "beht4fy88lq80a",
+  "version": 28,
+  "weekStart": ""
+}
